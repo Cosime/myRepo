@@ -1,7 +1,7 @@
 module First
   include GroupmeBotHelper
 
-  FIRST_COMMANDS = [:First, :add]
+  FIRST_COMMANDS = [:first, :add]
 
   def first(parameters = nil)
     return send_message(@bot.bot_id, "Try '+first commands' for more options") unless parameters
