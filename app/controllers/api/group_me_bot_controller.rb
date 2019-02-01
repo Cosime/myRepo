@@ -3,6 +3,7 @@ module Api
     include CentralCommandCenter
 
     def index
+      print "hello"
       setup
       process_message unless params['sender_type'] == 'bot' || (params['sender_type'] == 'system')
     end
