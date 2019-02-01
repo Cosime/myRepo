@@ -12,7 +12,8 @@ module First
     end
   end
 
-  def add(parameters = ["2","2"])
+  def add(parameters = nil)
+    return send_message(@bot.bot_id, "#{2+2}") unless parameters
     print "\n\n@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
     print parameters
     total = parameters[0].to_i + parameters[1].to_i
