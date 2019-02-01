@@ -12,7 +12,7 @@ module First
     end
   end
 
-  def add(parameters = [2,2])
+  def add(parameters = ["2","2"])
     total = parameters[0].to_i + parameters[1].to_i
     send_message(@bot.bot_id, "Total : #{total}")
   end
