@@ -44,7 +44,7 @@ module Api
           parse_text(library, text)
         end
 
-        if text.slice!(0) == '/'
+        if text.slice!(0) == '+'
           parsed_params = text.split(' ')
           if @bot.active_commands.include?(parsed_params[0])
             run_command(parsed_params)
