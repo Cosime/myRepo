@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  external_id: MyString
+  old_names: MyString
+  saved_message_ids: MyString
+  access_level: MyString
+  name: MyString
+
+two:
+  external_id: MyString
+  old_names: MyString
+  saved_message_ids: MyString
+  access_level: MyString
+  name: MyString
