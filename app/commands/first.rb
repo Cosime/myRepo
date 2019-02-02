@@ -36,7 +36,7 @@ module First
          totalpets += 1
       end
       if (y == 100 && x != 50)
-        "You turned in you cape for pet after kill #{i+1}!\n"
+         output += "You turned in you cape for pet after kill #{i+1}!\n"
          totalpets += 1
       end
       if (x == 50 && y == 100)
