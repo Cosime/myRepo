@@ -1,7 +1,7 @@
 module First
   include GroupmeBotHelper
 
-  FIRST_COMMANDS = [:first, :add]
+  FIRST_COMMANDS = [:first, :add, :jadpet]
 
   def first(parameters = nil)
     return send_message(@bot.bot_id, "Try '+first commands' for more options") unless parameters
@@ -18,6 +18,8 @@ module First
     total = parameters[0].to_i + parameters[1].to_i
     send_message(@bot.bot_id, "Total : #{total}")
   end
+
+
 
   def jadpet(parameters = nil)
     begin
@@ -40,4 +42,6 @@ module First
     end
     return send_message(@bot.bot_id, "You didnt get pet :(")
   end
+
+
 end
