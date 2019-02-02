@@ -32,15 +32,15 @@ module First
       x = rand(100)
       y = rand(200)
       if (x == 50 && y != 100)
-         send_message(@bot.bot_id, "You got pet on kill #{i+1}!") if(totalpets <= 40)
+         send_message(@bot.bot_id, "You got pet on kill #{i+1}!") if(totalpets <= 25)
          totalpets += 1
       end
       if (y == 100 && x != 50)
-         send_message(@bot.bot_id, "You turned in you cape for pet after kill #{i+1}!")if(totalpets <= 40)
+         send_message(@bot.bot_id, "You turned in you cape for pet after kill #{i+1}!")if(totalpets <= 25)
          totalpets += 1
       end
       if (x == 50 && y == 100)
-         send_message(@bot.bot_id, "You got pet, and turned in your cape for pet on kill #{i+1}!")if(totalpets <= 40)
+         send_message(@bot.bot_id, "You got pet, and turned in your cape for pet on kill #{i+1}!")if(totalpets <= 25)
          totalpets += 2
       end
     end
