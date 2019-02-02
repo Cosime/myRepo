@@ -19,8 +19,6 @@ module First
     send_message(@bot.bot_id, "Total : #{total}")
   end
 
-
-
   def jadpet(parameters = nil)
     begin
       attempt = parameters[0].to_i
@@ -28,7 +26,7 @@ module First
       attempt = 1
       end
 
-    return send_message(@bot.bot_id, "You killed jad #{attempt} times! (while on task)")
+    return send_message(@bot.bot_id, "You killed jad #{attempt} times! (while on task)\n")
 
     attempts.times do |i|
       x = rand(100)
@@ -39,9 +37,11 @@ module First
       if (y == 100 && x != 50)
         return send_message(@bot.bot_id, "You turned in you cape for pet after kill #{i+1})")
       end
+      if (x == 50 && y == 100)
+        return send_message(@bot.bot_id, "You got pet, and turned in your cape for pet on kill #{i+1})"
+      end
     end
     return send_message(@bot.bot_id, "You didnt get pet :(")
   end
-
 
 end
