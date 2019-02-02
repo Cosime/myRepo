@@ -1,7 +1,7 @@
 module First
   include GroupmeBotHelper
 
-  FIRST_COMMANDS = [:first, :add, :jadpet]
+  FIRST_COMMANDS = [:first, :add, :jadpet, :chessboard]
 
   def first(parameters = nil)
     return send_message(@bot.bot_id, "Try '+first commands' for more options") unless parameters
@@ -49,4 +49,16 @@ module First
       send_message(@bot.bot_id, "You killed jad #{attempt} times. (while on task)\nYou didn't get any pets :(")
   end
 
+  def chessboard(parameters = nil)
+    output = ""
+    output += "♜ | ♞ | ♝ | ♛ | ♚ | ♝ | ♞ | ♜\n----------------------------------"
+    output += "♟ | ♟ | ♟ | ♟ | ♟ | ♟ | ♟ | ♟\n----------------------------------"
+    output += "@ | @ | @ | @ | @ | @ | @ | @\n----------------------------------"
+    output += "@ | @ | @ | @ | @ | @ | @ | @\n----------------------------------"
+    output += "@ | @ | @ | @ | @ | @ | @ | @\n----------------------------------"
+    output += "@ | @ | @ | @ | @ | @ | @ | @\n----------------------------------"
+    output += "♙ | ♙ | ♙ | ♙ | ♙ | ♙ | ♙ | ♙\n----------------------------------"
+    output += "♖ | ♘ | ♗ | ♕ | ♔ | ♗ | ♘ | ♖\n----------------------------------"
+
+  end
 end
