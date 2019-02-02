@@ -32,13 +32,13 @@ module First
       x = rand(100)
       y = rand(200)
       if (x == 50 && y != 100)
-        return send_message(@bot.bot_id, "You got pet on kill #{i+1})")
+        return send_message(@bot.bot_id, "You got pet on kill #{i+1}")
       end
       if (y == 100 && x != 50)
-        return send_message(@bot.bot_id, "You turned in you cape for pet after kill #{i+1})")
+        return send_message(@bot.bot_id, "You turned in you cape for pet after kill #{i+1}")
       end
       if (x == 50 && y == 100)
-        return send_message(@bot.bot_id, "You got pet, and turned in your cape for pet on kill #{i+1})")
+        return send_message(@bot.bot_id, "You got pet, and turned in your cape for pet on kill #{i+1}")
       end
     end
     return send_message(@bot.bot_id, "You didnt get pet :(")
