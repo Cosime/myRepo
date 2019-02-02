@@ -28,7 +28,7 @@ module First
 
     send_message(@bot.bot_id, "You killed jad #{attempt} times. (while on task)\n")
 
-    attempts.times do |i|
+    attempt.times do |i|
       x = rand(100)
       y = rand(200)
       if (x == 50 && y != 100)
