@@ -46,7 +46,7 @@ module First
     end
       output =  "You killed jad #{attempt} times. (while on task)\nYou got #{totalpets} pets!\n" + output
       send_message(@bot.bot_id, output) unless (totalpets == 0)
-      send_message(@bot.bot_id, "You didn't get any pets :(")
+      send_message(@bot.bot_id, "You killed jad #{attempt} times. (while on task)\nYou didn't get any pets :(")
   end
 
 end
