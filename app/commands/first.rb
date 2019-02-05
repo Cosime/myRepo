@@ -52,7 +52,6 @@ module First
   def lolwinrate(parameters = nil)
     return send_message(@bot.bot_id, "Please input a champion") unless parameters
     champion = parameters[0]
-    champion.delete_at(0)
 
     require('JSON')
     require('net/http')
