@@ -1,3 +1,5 @@
+require('JSON')
+require('net/http')
 module First
   include GroupmeBotHelper
 
@@ -53,8 +55,7 @@ module First
     return send_message(@bot.bot_id, "Please input a champion") unless parameters
     champion = parameters[0]
 
-    require('JSON')
-    require('net/http')
+
     uri = URI("https://api.champion.gg/v2/champions?champData=winRate&api_key=034ec73065048e9f9b91a98762c25494")
     data = JSON.parse(Net::HTTP.get(uri))
 
