@@ -59,6 +59,7 @@ module First
     data = JSON.parse(Net::HTTP.get(uri))
 
     champID = findchamp(parameters[0])
+    if (champID == nil) then return send_message(@bot.bot_id, "invalid champion name")
     a = data.select { |x| x['_id']['championId'] == champID}
     winrate = a.first['winRate']
 
@@ -86,5 +87,6 @@ private
   p champs
   selected = champs.select { |x| x["name"].downcase == championName}
   p selected
+  if (selected.legnth == 0) then return nil
   selected.first["id"]
   end
