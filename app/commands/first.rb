@@ -62,7 +62,7 @@ module First
     champ = findchamp(parameters[0])
     a = data.select { |x| x['_id']['championId'] == champ}
 
-    temp = x.first['winRate']
+    temp = a.first['winRate']
 
     return send_message(@bot.bot_id, parameters[0] + " " + temp)
 
