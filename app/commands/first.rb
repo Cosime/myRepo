@@ -85,7 +85,7 @@ end
 private
   def findchamp(parameters = nil)
   if parameters[0] ==  "Aatrox"       return 266
-    if parameters[0] == "Ahri"        return  103
+  if parameters[0] == "Ahri"        return  103
     if parameters[0] == "Akali"       return  84
     if parameters[0] == "Alistar"     return  12
     if parameters[0] == "Amumu"       return  32
