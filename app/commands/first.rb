@@ -84,144 +84,144 @@ end
 
 private
   def findchamp(parameters = nil)
-  if parameters[0] ==  "Aatrox"       return 266
-  if parameters[0] == "Ahri"        return  103
-    if parameters[0] == "Akali"       return  84
-    if parameters[0] == "Alistar"     return  12
-    if parameters[0] == "Amumu"       return  32
-    if parameters[0] == "Anivia"      return  34
-    if parameters[0] == "Annie"       return  1
-    if parameters[0] == "Ashe"        return  22
-    if parameters[0] == "AurelionSol" return  136
-    if parameters[0] == "Azir"        return  268
-    if parameters[0] == "Bard"        return  432
-    if parameters[0] == "Blitzcrank"  return  53
-    if parameters[0] == "Brand"        return 63
-    if parameters[0] =="Braum"       return  201
-  if parameters[0] ==  "Caitlyn"     return  51
-    if parameters[0] =="Camille"    return   164
-  if parameters[0] ==  "Cassiopeia"  return  69
-  if parameters[0] ==  "ChoGath"    return   31
-  if parameters[0] ==  "Corki"      return   42
-    if parameters[0] =="Darius"     return   122
-    if parameters[0] =="Diana"       return  131
-  if parameters[0] ==  "DrMundo"     return  36
-    if parameters[0] =="Draven"     return   119
-    if parameters[0] =="Ekko"          return 245
-  if parameters[0] ==  "Elise"        return  60
-    if parameters[0] ==  "Evelynn"      return  28
-    if parameters[0] ==  "Ezreal"      return   81
-    if parameters[0] ==  "Fiddlesticks"return   9
-    if parameters[0] ==  "Fiora"       return   114
-    if parameters[0] ==  "Fizz"        return   105
-    if parameters[0] ==  "Galio"       return   3
-    if parameters[0] ==  "Gangplank"    return  41
-    if parameters[0] ==  "Garen"        return  86
-    if parameters[0] ==  "Gnar"        return   150
-    if parameters[0] ==  "Gragas"       return  79
-    if parameters[0] ==  "Graves"        return 104
-    if parameters[0] ==  "Hecarim"      return  120
-    if parameters[0] ==  "Heimerdinger"  return 74
-    if parameters[0] ==  "Illaoi"       return  420
-    if parameters[0] ==  "Irelia"       return  39
-    if parameters[0] ==  "Ivern"        return  427
-    if parameters[0] ==  "Janna"         return 40
-    if parameters[0] ==  "JarvanIV"      return 59
-    if parameters[0] ==  "Jax"           return 24
-    if parameters[0] ==  "Jayce"         return 126
-    if parameters[0] ==  "Jhin"          return 202
-    if parameters[0] ==  "Jinx"       return    222
-    if parameters[0] ==  "Kalista"    return    429
-    if parameters[0] ==  "Karma"      return    43
-    if parameters[0] ==  "Karthus"   return     30
-    if parameters[0] ==  "Kassadin"  return     38
-    if parameters[0] ==  "Katarina"  return     55
-    if parameters[0] ==  "Kayle"     return     10
-    if parameters[0] ==  "Kayn"      return     141
-    if parameters[0] ==  "Kennen"     return    85
-    if parameters[0] ==  "KhaZix"    return     121
-    if parameters[0] ==  "Kindred"       return 203
-    if parameters[0] ==  "Kled"          return 240
-    if parameters[0] ==  "KogMaw"       return  96
-    if parameters[0] ==  "LeBlanc"     return   7
-    if parameters[0] ==  "LeeSin"       return  64
-    if parameters[0] ==  "Leona"        return  89
-    if parameters[0] ==  "Lissandra"     return 127
-    if parameters[0] ==  "Lucian"        return 236
-    if parameters[0] ==  "Lulu"          return 117
-    if parameters[0] ==  "Lux"          return  99
-    if parameters[0] ==  "Malphite"     return  54
-    if parameters[0] ==  "Malzahar"     return  90
-    if parameters[0] ==  "Maokai"       return  57
-    if parameters[0] ==  "MasterYi"     return  11
-    if parameters[0] ==  "MissFortune"  return  21
-    if parameters[0] ==  "Mordekaiser"  return  82
-    if parameters[0] ==  "Morgana"      return  25
-    if parameters[0] ==  "Nami"          return 267
-    if parameters[0] ==  "Nasus"        return  75
-    if parameters[0] ==  "Nautilus"      return 111
-    if parameters[0] ==  "Nidalee"       return 76
-    if parameters[0] ==  "Nocturne"     return  56
-    if parameters[0] ==  "Nunu"         return  20
-    if parameters[0] ==  "Olaf"         return  2
-    if parameters[0] ==  "Orianna"     return   61
-    if parameters[0] ==  "Ornn"         return  516
-    if parameters[0] ==  "Pantheon"      return 80
-    if parameters[0] ==  "Poppy"        return 78
-    if parameters[0] ==  "Quinn"       return   133
-    if parameters[0] ==  "Rakan"       return   497
-    if parameters[0] ==  "Rammus"      return   33
-    if parameters[0] ==  "RekSai"       return  421
-    if parameters[0] ==  "Renekton"    return   58
-    if parameters[0] ==  "Rengar"       return  107
-    if parameters[0] ==  "Riven"       return   92
-    if parameters[0] ==  "Rumble"      return   68
-    if parameters[0] ==  "Ryze"        return   13
-    if parameters[0] ==  "Sejuani"      return  113
-    if parameters[0] ==  "Shaco"       return   35
-    if parameters[0] ==  "Shen"        return   98
-    if parameters[0] ==  "Shyvana"       return 102
-    if parameters[0] ==  "Singed"       return  27
-    if parameters[0] ==  "Sion"         return  14
-    if parameters[0] ==  "Sivir"        return  15
-    if parameters[0] ==  "Skarner"      return  72
-    if parameters[0] ==  "Sona"         return  37
-    if parameters[0] ==  "Soraka"       return  16
-    if parameters[0] ==  "Swain"        return  50
-    if parameters[0] ==  "Syndra"        return 134
-    if parameters[0] ==  "TahmKench"     return 223
-    if parameters[0] ==  "Taliyah"       return 163
-    if parameters[0] ==  "Talon"        return  91
-    if parameters[0] ==  "Taric"        return  44
-    if parameters[0] ==  "Teemo"        return  17
-    if parameters[0] ==  "Thresh"        return 412
-    if parameters[0] ==  "Tristana"     return  18
-    if parameters[0] ==  "Trundle"      return  48
-    if parameters[0] ==  "Tryndamere"   return  23
-    if parameters[0] ==  "TwistedFate" return   4
-    if parameters[0] ==  "Twitch"       return  29
-    if parameters[0] ==  "Udyr"          return  77
-    if parameters[0] ==    "Urgot"       return   6
-    if parameters[0] ==    "Varus"         return 110
-    if parameters[0] ==    "Vayne"        return  67
-    if parameters[0] ==    "Veigar"       return  45
-    if parameters[0] ==    "VelKoz"        return 161
-    if parameters[0] ==    "Vi"            return 254
-    if parameters[0] ==    "Viktor"        return 112
-    if parameters[0] ==    "Vladimir"    return   8
-    if parameters[0] ==    "Volibear"      return 106
-    if parameters[0] ==    "Warwick"    return   19
-    if parameters[0] ==    "Wukong"     return   62
-    if parameters[0] ==    "Xayah"       return  498
-    if parameters[0] ==    "Xerath"      return  101
-    if parameters[0] ==    "XinZhao"   return    5
-    if parameters[0] ==    "Yasuo"       return  157
-    if parameters[0] ==    "Yorick"     return   83
-    if parameters[0] ==    "Zac"         return  154
-    if parameters[0] ==    "Zed"         return  238
-    if parameters[0] ==    "Ziggs"       return  115
-    if parameters[0] ==    "Zilean"     return   26
-    if parameters[0] ==    "Zoe"        return  142
-    if parameters[0] ==    "Zyra"       return    143
+  if parameters[0] ==  "Aatrox"     then  return 266
+  if parameters[0] == "Ahri"      then  return  103
+    if parameters[0] == "Akali"    then   return  84
+    if parameters[0] == "Alistar"  then   return  12
+    if parameters[0] == "Amumu"    then   return  32
+    if parameters[0] == "Anivia"   then   return  34
+    if parameters[0] == "Annie"    then   return  1
+    if parameters[0] == "Ashe"     then   return  22
+    if parameters[0] == "AurelionSol" then return  136
+    if parameters[0] == "Azir"     then   return  268
+    if parameters[0] == "Bard"     then   return  432
+    if parameters[0] == "Blitzcrank" then return  53
+    if parameters[0] == "Brand"     then   return 63
+    if parameters[0] =="Braum"      then return  201
+  if parameters[0] ==  "Caitlyn"    then return  51
+    if parameters[0] =="Camille"  then  return   164
+  if parameters[0] ==  "Cassiopeia" then return  69
+  if parameters[0] ==  "ChoGath"  then  return   31
+  if parameters[0] ==  "Corki"    then  return   42
+    if parameters[0] =="Darius"   then  return   122
+    if parameters[0] =="Diana"    then   return  131
+  if parameters[0] ==  "DrMundo"  then   return  36
+    if parameters[0] =="Draven"   then  return   119
+    if parameters[0] =="Ekko"         then     return 245
+  if parameters[0] ==  "Elise"        then    return  60
+    if parameters[0] ==  "Evelynn"    then      return  28
+    if parameters[0] ==  "Ezreal"     then     return   81
+    if parameters[0] ==  "Fiddlesticks"    then return   9
+    if parameters[0] ==  "Fiora"    then   return   114
+    if parameters[0] ==  "Fizz"     then   return   105
+    if parameters[0] ==  "Galio"    then   return   3
+    if parameters[0] ==  "Gangplank" then   return  41
+    if parameters[0] ==  "Garen"    then    return  86
+    if parameters[0] ==  "Gnar"     then   return   150
+    if parameters[0] ==  "Gragas"   then    return  79
+    if parameters[0] ==  "Graves"   then     return 104
+    if parameters[0] ==  "Hecarim"  then    return  120
+    if parameters[0] ==  "Heimerdinger" then  return 74
+    if parameters[0] ==  "Illaoi"   then    return  420
+    if parameters[0] ==  "Irelia"   then    return  39
+    if parameters[0] ==  "Ivern"     then    return  427
+    if parameters[0] ==  "Janna"     then     return 40
+    if parameters[0] ==  "JarvanIV"  then     return 59
+    if parameters[0] ==  "Jax"       then     return 24
+    if parameters[0] ==  "Jayce"     then     return 126
+    if parameters[0] ==  "Jhin"     then      return 202
+    if parameters[0] ==  "Jinx"    then    return    222
+    if parameters[0] ==  "Kalista" then    return    429
+    if parameters[0] ==  "Karma"   then    return    43
+    if parameters[0] ==  "Karthus" then   return     30
+    if parameters[0] ==  "Kassadin" then  return     38
+    if parameters[0] ==  "Katarina" then  return     55
+    if parameters[0] ==  "Kayle"   then   return     10
+    if parameters[0] ==  "Kayn"    then   return     141
+    if parameters[0] ==  "Kennen"  then    return    85
+    if parameters[0] ==  "KhaZix"  then   return     121
+    if parameters[0] ==  "Kindred"   then     return 203
+    if parameters[0] ==  "Kled"      then     return 240
+    if parameters[0] ==  "KogMaw"   then     return  96
+    if parameters[0] ==  "LeBlanc"  then    return   7
+    if parameters[0] ==  "LeeSin"   then     return  64
+    if parameters[0] ==  "Leona"     then    return  89
+    if parameters[0] ==  "Lissandra" then     return 127
+    if parameters[0] ==  "Lucian"    then     return 236
+    if parameters[0] ==  "Lulu"      then     return 117
+    if parameters[0] ==  "Lux"       then    return  99
+    if parameters[0] ==  "Malphite"  then    return  54
+    if parameters[0] ==  "Malzahar"  then    return  90
+    if parameters[0] ==  "Maokai"    then    return  57
+    if parameters[0] ==  "MasterYi"  then    return  11
+    if parameters[0] ==  "MissFortune" then  return  21
+    if parameters[0] ==  "Mordekaiser" then  return  82
+    if parameters[0] ==  "Morgana"   then    return  25
+    if parameters[0] ==  "Nami"      then     return 267
+    if parameters[0] ==  "Nasus"     then    return  75
+    if parameters[0] ==  "Nautilus"  then     return 111
+    if parameters[0] ==  "Nidalee"   then     return 76
+    if parameters[0] ==  "Nocturne"  then    return  56
+    if parameters[0] ==  "Nunu"      then    return  20
+    if parameters[0] ==  "Olaf"      then    return  2
+    if parameters[0] ==  "Orianna"   then  return   61
+    if parameters[0] ==  "Ornn"      then   return  516
+    if parameters[0] ==  "Pantheon"  then    return 80
+    if parameters[0] ==  "Poppy"     then   return 78
+    if parameters[0] ==  "Quinn"     then  return   133
+    if parameters[0] ==  "Rakan"     then  return   497
+    if parameters[0] ==  "Rammus"    then  return   33
+    if parameters[0] ==  "RekSai"    then   return  421
+    if parameters[0] ==  "Renekton"  then  return   58
+    if parameters[0] ==  "Rengar"    then   return  107
+    if parameters[0] ==  "Riven"     then  return   92
+    if parameters[0] ==  "Rumble"    then  return   68
+    if parameters[0] ==  "Ryze"      then  return   13
+    if parameters[0] ==  "Sejuani"   then   return  113
+    if parameters[0] ==  "Shaco"     then  return   35
+    if parameters[0] ==  "Shen"      then  return   98
+    if parameters[0] ==  "Shyvana"   then    return 102
+    if parameters[0] ==  "Singed"    then   return  27
+    if parameters[0] ==  "Sion"      then   return  14
+    if parameters[0] ==  "Sivir"     then   return  15
+    if parameters[0] ==  "Skarner"   then   return  72
+    if parameters[0] ==  "Sona"      then   return  37
+    if parameters[0] ==  "Soraka"    then   return  16
+    if parameters[0] ==  "Swain"     then   return  50
+    if parameters[0] ==  "Syndra"    then    return 134
+    if parameters[0] ==  "TahmKench" then    return 223
+    if parameters[0] ==  "Taliyah"     then   return 163
+    if parameters[0] ==  "Talon"       then  return  91
+    if parameters[0] ==  "Taric"       then  return  44
+    if parameters[0] ==  "Teemo"       then  return  17
+    if parameters[0] ==  "Thresh"      then   return 412
+    if parameters[0] ==  "Tristana"    then  return  18
+    if parameters[0] ==  "Trundle"     then  return  48
+    if parameters[0] ==  "Tryndamere"  then  return  23
+    if parameters[0] ==  "TwistedFate" then return   4
+    if parameters[0] ==  "Twitch"      then  return  29
+    if parameters[0] ==  "Udyr"        then   return  77
+    if parameters[0] ==    "Urgot"     then   return   6
+    if parameters[0] ==    "Varus"     then     return 110
+    if parameters[0] ==    "Vayne"    then    return  67
+    if parameters[0] ==    "Veigar"   then    return  45
+    if parameters[0] ==    "VelKoz"   then     return 161
+    if parameters[0] ==    "Vi"       then     return 254
+    if parameters[0] ==    "Viktor"   then     return 112
+    if parameters[0] ==    "Vladimir" then   return   8
+    if parameters[0] ==    "Volibear" then     return 106
+    if parameters[0] ==    "Warwick"  then  return   19
+    if parameters[0] ==    "Wukong"   then  return   62
+    if parameters[0] ==    "Xayah"    then   return  498
+    if parameters[0] ==    "Xerath"   then   return  101
+    if parameters[0] ==    "XinZhao"  then return    5
+    if parameters[0] ==    "Yasuo"    then   return  157
+    if parameters[0] ==    "Yorick"   then  return   83
+    if parameters[0] ==    "Zac"      then   return  154
+    if parameters[0] ==    "Zed"      then   return  238
+    if parameters[0] ==    "Ziggs"    then   return  115
+    if parameters[0] ==    "Zilean"   then  return   26
+    if parameters[0] ==    "Zoe"      then  return  142
+    if parameters[0] ==    "Zyra"     then  return    143
    }
   end
