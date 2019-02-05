@@ -84,6 +84,6 @@ end
 private
   def findchamp(championName)
   champs = JSON.parse(File.read('championlist.json'))
-  selected = champs.select { |x| x["name"] == championName}
+  selected = champs.select { |x| x["name"].downcase.split(' ') == championName}
   selected.first["id"]
   end
