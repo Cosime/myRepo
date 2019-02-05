@@ -52,7 +52,7 @@ module First
 
   def lolwinrate(parameters = nil)
     return send_message(@bot.bot_id, "Please input a champion") unless parameters
-    champion = parameters.join(' ')
+    champion = parameters.join()
 
 
     uri = URI("https://api.champion.gg/v2/champions?champData=winRate&api_key=034ec73065048e9f9b91a98762c25494")
@@ -63,7 +63,7 @@ module First
     a = data.select { |x| x['_id']['championId'] == champID}
     winrate = a.first['winRate']
 
-    return send_message(@bot.bot_id, parameters[0] + " #{winrate*100}%")
+    return send_message(@bot.bot_id, parameters.join(' ') + " #{winrate*100}%")
 
   end
 
