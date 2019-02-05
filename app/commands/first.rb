@@ -52,7 +52,7 @@ module First
 
   def lolwinrate(parameters = nil)
     return send_message(@bot.bot_id, "Please input a champion") unless parameters
-    champion = parameters[0]
+    champion = parameters.join(' ')
 
 
     uri = URI("https://api.champion.gg/v2/champions?champData=winRate&api_key=034ec73065048e9f9b91a98762c25494")
