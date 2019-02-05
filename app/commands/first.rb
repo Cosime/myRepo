@@ -1,6 +1,4 @@
-require ('rubygems')
-require('JSON')
-require('net/http')
+
 module First
   include GroupmeBotHelper
 
