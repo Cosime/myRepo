@@ -51,7 +51,7 @@ module First
 
   def lolwinrate(parameters = nil)
     return send_message(@bot.bot_id, "Please input a champion") unless parameters
-    champion = params[:text].downcase.split(' ')
+    champion = parameters[0]
     champion.delete_at(0)
 
     require('JSON')
@@ -84,6 +84,8 @@ end
 private
   def findchamp(championName)
   champs = JSON.parse(File.read('championlist.json'))
-  selected = champs.select { |x| x["name"].downcase.split(' ') == championName}
+  p champs
+  selected = champs.select { |x| x["name"].downcase == championName}
+  p selected
   selected.first["id"]
   end
