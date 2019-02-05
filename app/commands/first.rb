@@ -87,6 +87,6 @@ private
   p champs
   selected = champs.select { |x| x["name"].downcase == championName}
   p selected
-  if (selected.legnth == 0) then return nil end
+  if (selected.length == 0) then return nil end
   selected.first["id"]
   end
