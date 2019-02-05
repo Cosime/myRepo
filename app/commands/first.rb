@@ -62,7 +62,7 @@ module First
     a = data.select { |x| x['_id']['championId'] == champID}
     winrate = a.first['winRate']
 
-    return send_message(@bot.bot_id, parameters[0] + " #{winrate*100}")
+    return send_message(@bot.bot_id, parameters[0] + " #{winrate*100}%")
 
   end
 
