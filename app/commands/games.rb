@@ -54,6 +54,7 @@ module Games
             return board
           end
         end
+      end
 
      3.times do |j|
         if board[j][i] != '*' && board[x][y] != move_type
@@ -62,6 +63,7 @@ module Games
             return board
           end
         end
+      end
 
         #Checking diagonals for saving moves
      if board[1][1] != '*' && board[1][1] != move_type
@@ -94,6 +96,7 @@ module Games
             return board
           end
         end
+      end
 
      3.times do |j|
         if board[j][i] == move_type
@@ -102,6 +105,7 @@ module Games
             return board
           end
         end
+      end
 
         #Checking diagonals for winning moves
      if board[1][1] == move_type
@@ -127,7 +131,7 @@ module Games
        board[1][1] = move_type
      end
 
-     loop do
+     while(1)
        random1 = rand(3)
        random2 = rand(3)
        if board[random1][random2] == '*'
