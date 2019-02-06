@@ -2,6 +2,7 @@ module CentralCommandCenter
   include GroupmeBotHelper
   include Runescape
   include First
+  include Games
   # include ExpressionTracker
 
   # Rules:
@@ -10,7 +11,7 @@ module CentralCommandCenter
   # 3) All libraries must be put into LIBRARIES array
   # 4) All library must have a COMMANDS array
 
-  LIBRARIES = { 'runescape'=> RUNESCAPE_COMMANDS, 'first'=> FIRST_COMMANDS }
+  LIBRARIES = { 'runescape'=> RUNESCAPE_COMMANDS, 'first'=> FIRST_COMMANDS, 'games' => GAMES_COMMANDS}
 
   def run_command(input)
     send_message(@bot_id, "Permission Denied") && return if @group_member.access_level == "none"
