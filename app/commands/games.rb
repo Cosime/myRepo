@@ -129,6 +129,7 @@ module Games
 
      if board[1][1] == '*'
        board[1][1] = move_type
+       return board
      end
 
      while(1)
@@ -142,7 +143,7 @@ module Games
 
 
 
-    
+
     return board
   end
 
