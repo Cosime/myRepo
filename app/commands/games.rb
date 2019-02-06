@@ -43,13 +43,101 @@ module Games
   private
   def make_move(board, move_type)
     # this is where logic goes to make a move
+    y = 0
+    i = 0
+
+    #checking row and cols for saving moves
     3.times do |x|
-      3.times do |y|
-        if board[x][y] == '*'
-          board[x][y] = move_type
-          return board;
+        if board[x][y] != '*' && board[x][y] != move_type
+          if board[x][y+1] != '*' && board[x][y] != move_type
+            board[x][y+2] = move_type
+            return board
+          end
         end
-      end
+
+     3.times do |j|
+        if board[j][i] != '*' && board[x][y] != move_type
+          if board[j][i+1] != '*' && board[x][y] != move_type
+            board[j][i+2] = move_type
+            return board
+          end
+        end
+
+        #Checking diagonals for saving moves
+     if board[1][1] != '*' && board[1][1] != move_type
+       if board[0][0] != '*' && board[0][0] != move_type
+         board[2][2] = move_type
+         return board
+       end
+       if board[2][2] != '*' && board[2][2] != move_type
+         board[0][0] = move_type
+         return board
+       end
+       if board[0][2] != '*' && board[0][2] != move_type
+         board[2][0] = move_type
+         return board
+       end
+       if board[2][0] != '*' && board[2][0] != move_type
+         board[0][2] = move_type
+         return board
+       end
+     end
+
+    #check for winning
+    y = 0
+    i = 0
+
+    3.times do |x|
+        if board[x][y] == move_type
+          if board[x][y+1] == move_type
+            board[x][y+2] = move_type
+            return board
+          end
+        end
+
+     3.times do |j|
+        if board[j][i] == move_type
+          if board[j][i+1] == move_type
+            board[j][i+2] = move_type
+            return board
+          end
+        end
+
+        #Checking diagonals for winning moves
+     if board[1][1] == move_type
+       if board[0][0] == move_type
+         board[2][2] = move_type
+         return board
+       end
+       if board[2][2] == move_type
+         board[0][0] = move_type
+         return board
+       end
+       if board[0][2] == move_type
+         board[2][0] = move_type
+         return board
+       end
+       if board[2][0] == move_type
+         board[0][2] = move_type
+         return board
+       end
+     end
+
+     if board[1][1] == '*'
+       board[1][1] = move_type
+     end
+
+     loop do
+       random1 = rand(3)
+       random2 = rand(3)
+       if board[random1][random2] == '*'
+         board[random1][random2] = move_type
+         return board
+       end
+     end
+
+
+
     end
     return board
   end
