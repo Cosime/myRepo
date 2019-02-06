@@ -71,6 +71,7 @@ module Games
         end
       end
 
+      i = 2
       3.times do |j|
          if board[i][j] == move_type
            if board[i-1][j] == move_type
@@ -82,6 +83,7 @@ module Games
          end
        end
 
+       y = 2
        3.times do |x|
            if board[x][y] == move_type
              if board[x][y-1] == move_type
@@ -143,7 +145,7 @@ module Games
         end
       end
 
-      i = 0
+      i = 2
       3.times do |j|
          if board[i][j] != '*' && board[i][j] != move_type
            if board[i-1][j] != '*' && board[i-1][j] != move_type
@@ -153,7 +155,7 @@ module Games
          end
        end
 
-       y=0
+       y=2
        3.times do |x|
            if board[x][y] != '*' && board[x][y] != move_type
              if board[x][y-1] != '*' && board[x][y-1] != move_type
