@@ -46,7 +46,7 @@ module Games
     3.times do |i|
       3.times do |j|
         if(board[i][j] != '*' && board[i][j] != move_type)
-          board[i][j] = move_type
+            return board[i][j] = move_type
         end
       end
     end
