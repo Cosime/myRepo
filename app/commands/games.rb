@@ -140,7 +140,7 @@ module Games
       board[1][1] = move_type
       return board
     end
-    if(board[1][1] != move_type != move_type &&   board[2][2] != move_type && board[1][1] != '*' &&  board[2][2] != '*')
+    if(board[1][1] != move_type &&   board[2][2] != move_type && board[1][1] != '*' &&  board[2][2] != '*')
       board[0][0] = move_type
       return board
     end
