@@ -45,145 +45,119 @@ module Games
 
     # this is where logic goes to make a move
 
-    #check for winning
-    y = 0
-    i = 0
-
-    3.times do |x|
-        if board[x][y] == move_type
-          if board[x][y+1] == move_type
-            if board[x][y+2] == '*'
-              board[x][y+2] = move_type
-              return board
-            end
-          end
-        end
+    3.times do |i|
+      if (board[0][i] && board[1][i] == move_type)
+        board[2][i] = move_type
+        return board
       end
-
-     3.times do |j|
-        if board[i][j] == move_type
-          if board[i+1][j] == move_type
-            if board[i+2][j] == '*'
-              board[i+2][j] = move_type
-              return board
-            end
-          end
-        end
+      if (board[0][i] == move_type &&  board[2][i] == move_type)
+        board[2][i] = move_type
+        return board
       end
-
-      i = 2
-      3.times do |j|
-         if board[i][j] == move_type
-           if board[i-1][j] == move_type
-             if board[i-2][j] == '*'
-               board[i-2][j] = move_type
-               return board
-             end
-           end
-         end
-       end
-
-       y = 2
-       3.times do |x|
-           if board[x][y] == move_type
-             if board[x][y-1] == move_type
-               if board[x][y-2] == '*'
-                 board[x][y-2] = move_type
-                 return board
-               end
-             end
-           end
-         end
-
-        #Checking diagonals for winning moves
-     if board[1][1] == move_type
-       if board[0][0] == move_type
-         if board[2][2] == '*'
-           board[2][2] = move_type
-           return board
-         end
-       end
-       if board[2][2] == move_type
-         if board[0][0] == '*'
-           board[0][0] = move_type
-           return board
-         end
-       end
-       if board[0][2] == move_type
-         if board[2][0] == '*'
-           board[2][0] = move_type
-           return board
-         end
-       end
-       if board[2][0] == move_type
-         if board[0][2] == '*'
-           board[0][2] = move_type
-           return board
-         end
-       end
-     end
-
-    y = 0
-    i = 0
-
-    #checking row and cols for saving moves
-    3.times do |x|
-        if board[x][y] != '*' && board[x][y] != move_type
-          if board[x][y+1] != '*' && board[x][y+1] != move_type
-            board[x][y+2] = move_type
-            return board
-          end
-        end
+      if (board[1][i] == move_type &&  board[2][i] == move_type)
+        board[2][i] = move_type
+        return board
       end
+    end
 
-     3.times do |j|
-        if board[i][j] != '*' && board[i][j] != move_type
-          if board[i+1][j] != '*' && board[i+1][j] != move_type
-            board[i+2][j] = move_type
-            return board
-          end
-        end
+    3.times do |i|
+      if (board[i][0] == move_type &&  board[i][1] == move_type)
+        board[i][2] = move_type
+        return board
       end
+      if (board[i][0] == move_type &&  board[i][2] == move_type)
+        board[i][1] = move_type
+        return board
+      end
+      if (board[i][1] == move_type &&  board[i][2] == move_type)
+        board[i][0] = move_type
+        return board
+      end
+    end
 
-      i = 2
-      3.times do |j|
-         if board[i][j] != '*' && board[i][j] != move_type
-           if board[i-1][j] != '*' && board[i-1][j] != move_type
-             board[i-2][j] = move_type
-             return board
-           end
-         end
-       end
+    if(board[0][0] == move_type &&  board[1][1] == move_type)
+      board[2][2] = move_type
+      return board
+    end
+    if(board[0][0] == move_type &&  board[2][2] == move_type)
+      board[1][1] = move_type
+      return board
+    end
+    if(board[1][1] == move_type &&  board[2][2] == move_type)
+      board[0][0] = move_type
+      return board
+    end
+    if(board[0][2] == move_type &&  board[1][1] == move_type)
+      board[2][0] = move_type
+      return board
+    end
+    if(board[0][2] == move_type &&  board[2][0] == move_type)
+      board[1][1] = move_type
+      return board
+    end
+    if(board[1][1] == move_type &&  board[2][0] == move_type)
+      board[0][2] = move_type
+      return board
+    end
 
-       y=2
-       3.times do |x|
-           if board[x][y] != '*' && board[x][y] != move_type
-             if board[x][y-1] != '*' && board[x][y-1] != move_type
-               board[x][y-2] = move_type
-               return board
-             end
-           end
-         end
+    #check for defense
 
-        #Checking diagonals for saving moves
-     if board[1][1] != '*' && board[1][1] != move_type
-       if board[0][0] != '*' && board[0][0] != move_type
-         board[2][2] = move_type
-         return board
-       end
-       if board[2][2] != '*' && board[2][2] != move_type
-         board[0][0] = move_type
-         return board
-       end
-       if board[0][2] != '*' && board[0][2] != move_type
-         board[2][0] = move_type
-         return board
-       end
-       if board[2][0] != '*' && board[2][0] != move_type
-         board[0][2] = move_type
-         return board
-       end
-     end
+    3.times do |i|
+      if (board[0][i] != move_type &&  board[1][i] != move_type && board[0][i] != '*' &&  board[1][i] != '*')
+        board[2][i] = move_type
+        return board
+      end
+      if (board[0][i] != move_type &&  board[2][i] != move_type && board[0][i] != '*' &&  board[2][i] != '*')
+        board[1][i] = move_type
+        return board
+      end
+      if (board[1][i] != move_type &&  board[2][i] != move_type && board[1][i] != '*' &&  board[2][i] != '*')
+        board[0][i] = move_type
+        return board
+      end
+    end
+
+    3.times do |i|
+      if (board[i][0] != move_type &&  board[i][1] != move_type && board[i][0] != '*' &&  board[i][1] != '*')
+        board[i][2] = move_type
+        return board
+      end
+      if (board[i][0] != move_type &&  board[i][2] != move_type && board[i][0] != '*' &&  board[i][2] != '*')
+        board[i][1] = move_type
+        return board
+      end
+      if (board[i][1] != move_type &&  board[i][2] != move_type && board[i][1] != '*' &&  board[i][2] != '*')
+        board[i][0] = move_type
+        return board
+      end
+    end
+
+    if(board[0][0] != move_type &&  board[1][1] != move_type && board[0][0] != '*' &&  board[1][1] != '*')
+      board[2][2] = move_type
+      return board
+    end
+    if(board[0][0] != move_type &&  board[2][2] != move_type && board[0][0] != '*' &&  board[2][2] != '*')
+      board[1][1] = move_type
+      return board
+    end
+    if(board[1][1] != move_type != move_type &&   board[2][2] != move_type && board[1][1] != '*' &&  board[2][2] != '*')
+      board[0][0] = move_type
+      return board
+    end
+    if(board[0][2] != move_type &&  board[1][1] != move_type && board[0][2] != '*' &&  board[1][1] != '*')
+      board[2][0] = move_type
+      return board
+    end
+    if(board[0][2] != move_type &&  board[2][0] != move_type && board[0][2] != '*' &&  board[2][0] != '*')
+      board[1][1] = move_type
+      return board
+    end
+    if(board[1][1] != move_type &&  board[2][0] != move_type && board[1][1] != '*' &&  board[2][0] != '*')
+      board[0][2] = move_type
+      return board
+    end
+
+
 
 
 
