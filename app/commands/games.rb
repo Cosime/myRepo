@@ -43,18 +43,8 @@ module Games
   private
   def make_move(board, move_type)
 
-    3.times do |i|
-      3.times do |j|
-        if(board[i][j] != '*' && board[i][j] != move_type)
-           board[i][j] = move_type
-           return board
-        end
-      end
-    end
-
-
     # this is where logic goes to make a move
-=begin
+
     3.times do |i|
       if (board[0][i] == move_type && board[1][i] == move_type)
         if(board[2][i] == '*')
@@ -219,7 +209,7 @@ module Games
        board[1][1] = move_type
        return board
      end
-=end
+
      while(1)
        srand(Time.now.to_i)
        random1 = rand(3)
