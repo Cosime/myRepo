@@ -217,7 +217,6 @@ module Games
      while(1)
        srand(time.now.to_i)
        random1 = rand(3)
-       srand(time.now.to_i)
        random2 = rand(3)
        if board[random1][random2] == '*'
          board[random1][random2] = move_type
