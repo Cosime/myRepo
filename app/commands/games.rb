@@ -47,19 +47,19 @@ module Games
 
     3.times do |i|
       if (board[0][i] == move_type && board[1][i] == move_type)
-        if(board[2][i] = '*')
+        if(board[2][i] == '*')
           board[2][i] = move_type
           return board
         end
       end
       if (board[0][i] == move_type &&  board[2][i] == move_type)
-        if(board[1][i] = '*')
+        if(board[1][i] == '*')
           board[1][i] = move_type
           return board
         end
       end
       if (board[1][i] == move_type &&  board[2][i] == move_type)
-        if(board[0][i] = '*')
+        if(board[0][i] == '*')
           board[0][i] = move_type
           return board
         end
@@ -68,19 +68,19 @@ module Games
 
     3.times do |i|
       if (board[i][0] == move_type &&  board[i][1] == move_type)
-        if(board[i][2] = '*')
+        if(board[i][2] == '*')
           board[i][2] = move_type
           return board
         end
       end
       if (board[i][0] == move_type &&  board[i][2] == move_type)
-        if(board[i][1] = '*')
+        if(board[i][1] == '*')
           board[i][1] = move_type
           return board
         end
       end
       if (board[i][1] == move_type &&  board[i][2] == move_type)
-        if(board[i][0] = '*')
+        if(board[i][0] == '*')
           board[i][0] = move_type
           return board
         end
@@ -88,37 +88,37 @@ module Games
     end
 
     if(board[0][0] == move_type &&  board[1][1] == move_type)
-      if(board[2][2] = '*')
+      if(board[2][2] == '*')
         board[2][2] = move_type
         return board
       end
     end
     if(board[0][0] == move_type &&  board[2][2] == move_type)
-      if(board[1][1] = '*')
+      if(board[1][1] == '*')
         board[1][1] = move_type
         return board
       end
     end
     if(board[1][1] == move_type &&  board[2][2] == move_type)
-      if(board[0][0] = '*')
+      if(board[0][0] == '*')
         board[0][0] = move_type
         return board
       end
     end
     if(board[0][2] == move_type &&  board[1][1] == move_type)
-      if(board[2][0] = '*')
+      if(board[2][0] == '*')
         board[2][0] = move_type
         return board
       end
     end
     if(board[0][2] == move_type &&  board[2][0] == move_type)
-      if(board[1][1] = '*')
+      if(board[1][1] == '*')
         board[1][1] = move_type
         return board
       end
     end
     if(board[1][1] == move_type &&  board[2][0] == move_type)
-      if(board[0][2] = '*')
+      if(board[0][2] == '*')
         board[0][2] = move_type
         return board
       end
@@ -128,19 +128,19 @@ module Games
 
     3.times do |i|
       if (board[0][i] != move_type &&  board[1][i] != move_type && board[0][i] != '*' &&  board[1][i] != '*')
-        if(board[2][i] = '*')
+        if(board[2][i] == '*')
           board[2][i] = move_type
           return board
         end
       end
       if (board[0][i] != move_type &&  board[2][i] != move_type && board[0][i] != '*' &&  board[2][i] != '*')
-        if(board[1][i] = '*')
+        if(board[1][i] == '*')
           board[1][i] = move_type
           return board
         end
       end
       if (board[1][i] != move_type &&  board[2][i] != move_type && board[1][i] != '*' &&  board[2][i] != '*')
-        if(board[0][i] = '*')
+        if(board[0][i] == '*')
           board[0][i] = move_type
           return board
         end
@@ -149,19 +149,19 @@ module Games
 
     3.times do |i|
       if (board[i][0] != move_type &&  board[i][1] != move_type && board[i][0] != '*' &&  board[i][1] != '*')
-        if(board[i][2] = '*')
+        if(board[i][2] == '*')
           board[i][2] = move_type
           return board
         end
       end
       if (board[i][0] != move_type &&  board[i][2] != move_type && board[i][0] != '*' &&  board[i][2] != '*')
-        if(board[i][1] = '*')
+        if(board[i][1] == '*')
           board[i][1] = move_type
           return board
         end
       end
       if (board[i][1] != move_type &&  board[i][2] != move_type && board[i][1] != '*' &&  board[i][2] != '*')
-        if(board[i][0] = '*')
+        if(board[i][0] == '*')
           board[i][0] = move_type
           return board
         end
@@ -169,37 +169,37 @@ module Games
     end
 
     if(board[0][0] != move_type &&  board[1][1] != move_type && board[0][0] != '*' &&  board[1][1] != '*')
-      if(board[2][2] = '*')
+      if(board[2][2] == '*')
         board[2][2] = move_type
         return board
       end
     end
     if(board[0][0] != move_type &&  board[2][2] != move_type && board[0][0] != '*' &&  board[2][2] != '*')
-      if(board[1][1] = '*')
+      if(board[1][1] == '*')
         board[1][1] = move_type
         return board
       end
     end
     if(board[1][1] != move_type &&   board[2][2] != move_type && board[1][1] != '*' &&  board[2][2] != '*')
-      if(board[0][0] = '*')
+      if(board[0][0] == '*')
         board[0][0] = move_type
         return board
       end
     end
     if(board[0][2] != move_type &&  board[1][1] != move_type && board[0][2] != '*' &&  board[1][1] != '*')
-      if(board[2][0] = '*')
+      if(board[2][0] == '*')
         board[2][0] = move_type
         return board
       end
     end
     if(board[0][2] != move_type &&  board[2][0] != move_type && board[0][2] != '*' &&  board[2][0] != '*')
-      if(board[1][1] = '*')
+      if(board[1][1] == '*')
         board[1][1] = move_type
         return board
       end
     end
     if(board[1][1] != move_type &&  board[2][0] != move_type && board[1][1] != '*' &&  board[2][0] != '*')
-      if(board[0][2] = '*')
+      if(board[0][2] == '*')
         board[0][2] = move_type
         return board
       end
