@@ -46,18 +46,18 @@ module Games
     # this is where logic goes to make a move
 
     3.times do |i|
-      if (board[0][i] && board[1][i] == move_type)
-        send_message(@bot.bot_id, "1")
+      if (board[0][i] == move_type && board[1][i] == move_type)
+        #send_message(@bot.bot_id, "1")
         board[2][i] = move_type
         return board
       end
       if (board[0][i] == move_type &&  board[2][i] == move_type)
-        send_message(@bot.bot_id, "2")
+        #send_message(@bot.bot_id, "2")
         board[2][i] = move_type
         return board
       end
       if (board[1][i] == move_type &&  board[2][i] == move_type)
-        send_message(@bot.bot_id, "3")
+        #send_message(@bot.bot_id, "3")
         board[2][i] = move_type
         return board
       end
@@ -65,49 +65,49 @@ module Games
 
     3.times do |i|
       if (board[i][0] == move_type &&  board[i][1] == move_type)
-        send_message(@bot.bot_id, "4")
+        #send_message(@bot.bot_id, "4")
         board[i][2] = move_type
         return board
       end
       if (board[i][0] == move_type &&  board[i][2] == move_type)
-        send_message(@bot.bot_id, "5")
+        #send_message(@bot.bot_id, "5")
         board[i][1] = move_type
         return board
       end
       if (board[i][1] == move_type &&  board[i][2] == move_type)
-        send_message(@bot.bot_id, "6")
+        #send_message(@bot.bot_id, "6")
         board[i][0] = move_type
         return board
       end
     end
 
     if(board[0][0] == move_type &&  board[1][1] == move_type)
-      send_message(@bot.bot_id, "7")
+      #send_message(@bot.bot_id, "7")
       board[2][2] = move_type
       return board
     end
     if(board[0][0] == move_type &&  board[2][2] == move_type)
-      send_message(@bot.bot_id, "8")
+      #send_message(@bot.bot_id, "8")
       board[1][1] = move_type
       return board
     end
     if(board[1][1] == move_type &&  board[2][2] == move_type)
-      send_message(@bot.bot_id, "9")
+      #send_message(@bot.bot_id, "9")
       board[0][0] = move_type
       return board
     end
     if(board[0][2] == move_type &&  board[1][1] == move_type)
-      send_message(@bot.bot_id, "10")
+      #send_message(@bot.bot_id, "10")
       board[2][0] = move_type
       return board
     end
     if(board[0][2] == move_type &&  board[2][0] == move_type)
-      send_message(@bot.bot_id, "11")
+      #send_message(@bot.bot_id, "11")
       board[1][1] = move_type
       return board
     end
     if(board[1][1] == move_type &&  board[2][0] == move_type)
-      send_message(@bot.bot_id, "12")
+      #send_message(@bot.bot_id, "12")
       board[0][2] = move_type
       return board
     end
@@ -116,17 +116,17 @@ module Games
 
     3.times do |i|
       if (board[0][i] != move_type &&  board[1][i] != move_type && board[0][i] != '*' &&  board[1][i] != '*')
-        send_message(@bot.bot_id, "13")
+        #send_message(@bot.bot_id, "13")
         board[2][i] = move_type
         return board
       end
       if (board[0][i] != move_type &&  board[2][i] != move_type && board[0][i] != '*' &&  board[2][i] != '*')
-        send_message(@bot.bot_id, "14")
+        #send_message(@bot.bot_id, "14")
         board[1][i] = move_type
         return board
       end
       if (board[1][i] != move_type &&  board[2][i] != move_type && board[1][i] != '*' &&  board[2][i] != '*')
-        send_message(@bot.bot_id, "15")
+        #send_message(@bot.bot_id, "15")
         board[0][i] = move_type
         return board
       end
@@ -134,49 +134,49 @@ module Games
 
     3.times do |i|
       if (board[i][0] != move_type &&  board[i][1] != move_type && board[i][0] != '*' &&  board[i][1] != '*')
-        send_message(@bot.bot_id, "16")
+        #send_message(@bot.bot_id, "16")
         board[i][2] = move_type
         return board
       end
       if (board[i][0] != move_type &&  board[i][2] != move_type && board[i][0] != '*' &&  board[i][2] != '*')
-        send_message(@bot.bot_id, "17")
+        #send_message(@bot.bot_id, "17")
         board[i][1] = move_type
         return board
       end
       if (board[i][1] != move_type &&  board[i][2] != move_type && board[i][1] != '*' &&  board[i][2] != '*')
-        send_message(@bot.bot_id, "18")
+        #send_message(@bot.bot_id, "18")
         board[i][0] = move_type
         return board
       end
     end
 
     if(board[0][0] != move_type &&  board[1][1] != move_type && board[0][0] != '*' &&  board[1][1] != '*')
-      send_message(@bot.bot_id, "19")
+      #send_message(@bot.bot_id, "19")
       board[2][2] = move_type
       return board
     end
     if(board[0][0] != move_type &&  board[2][2] != move_type && board[0][0] != '*' &&  board[2][2] != '*')
-      send_message(@bot.bot_id, "20")
+      #send_message(@bot.bot_id, "20")
       board[1][1] = move_type
       return board
     end
     if(board[1][1] != move_type &&   board[2][2] != move_type && board[1][1] != '*' &&  board[2][2] != '*')
-      send_message(@bot.bot_id, "21")
+      #send_message(@bot.bot_id, "21")
       board[0][0] = move_type
       return board
     end
     if(board[0][2] != move_type &&  board[1][1] != move_type && board[0][2] != '*' &&  board[1][1] != '*')
-      send_message(@bot.bot_id, "22")
+      #send_message(@bot.bot_id, "22")
       board[2][0] = move_type
       return board
     end
     if(board[0][2] != move_type &&  board[2][0] != move_type && board[0][2] != '*' &&  board[2][0] != '*')
-      send_message(@bot.bot_id, "23")
+      #send_message(@bot.bot_id, "23")
       board[1][1] = move_type
       return board
     end
     if(board[1][1] != move_type &&  board[2][0] != move_type && board[1][1] != '*' &&  board[2][0] != '*')
-      send_message(@bot.bot_id, "24")
+      #send_message(@bot.bot_id, "24")
       board[0][2] = move_type
       return board
     end
