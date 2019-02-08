@@ -43,8 +43,8 @@ module Games
   private
   def make_move(board, move_type)
 
-    3.time do |i|
-      3.time do |j|
+    3.times do |i|
+      3.times do |j|
         if(board[i][j] != '*' && board[i][j] != move_type)
           board[i][j] = move_type
         end
